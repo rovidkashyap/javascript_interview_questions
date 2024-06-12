@@ -1,0 +1,51 @@
+<!--
+    Imagine you're building a web app with a button that users can click to 
+    "like" a post. You want to keep track of how many times the button has
+    been clicked. Here's you might use a closure to implement this:
+-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <button id="likeButton">Like</button>
+        <p id="likeCount">0 Likes</p>
+    </body>
+    <script>
+        function createLikeCounter(){
+            let likeCount = 0;
+
+            return function() {
+                likeCount++;
+                return likeCount;
+            };
+        }
+
+        // Calling Function in variable
+        const likeCounter = createLikeCounter();
+
+        // Getting button by Id in variable
+        const button = document.getElementById('likeButton');
+        // Getting text by Id in variable
+        const likeDisplay = document.getElementById('likeCount');
+
+        // add event of click on button
+        button.addEventListener('click', function(){
+            const count = likeCounter(); // on every click it increments
+            likeDisplay.textContent = count + ' Likes'; // updates text on evry click
+        });
+    </script>
+</html>
+
+<!-- 
+    EXPLAINATION OF THIS CODE IN SIMPLE WORDS
+
+    STEP 1 - define local variable `likeCount` and return the function that
+            increments and return `likeCount`.
+
+    STEP 2 - likeCounter holds the function returned by `createLikeCounter`.
+            which has access to `likeCount` variable.
+    
+    STEP 3 - Each time button is clicked the `likeCounter` function is called,
+            increment `likeCount` and updating the display.
+
+-->
