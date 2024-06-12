@@ -1,0 +1,55 @@
+<!-- Event Delegation is basically a pattern to handle events efficiently. -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+        </div>
+    </body>
+
+    <script>
+        //const buttons = document.querySelectorAll('BUTTONS')
+
+        //buttons.forEach(button => {
+        //    button.addEventListener("click", (event) => {
+        //        console.log(event.target.innerText)
+        //    })
+        //})
+
+        const divs = document.querySelector('div')
+
+        divs.addEventListener("click", (event) => {
+            if(event.target.tagName === 'BUTTON') {
+                console.log(event.target.innerText);
+            }
+        })
+    </script>
+</html>
+
+<!--
+    IN THE ABOVE EXAMPLE WITH EVENT DELEGATION, INSTEAD OF HANDLING
+    THE CLICK EVENT ON BUTTON, WE CAN HANDLE IT ON DIV.
+
+    AS YOU SEE WE COMMENTED THAT CODE WHICH HANDLES CLICK EVENT ON 
+    BUTTONS INSTEAD OF DIV YOU JUST UNCOMMENT IT AND SEE WHAT CONSOLE
+    SHOWS YOU WHEN YOU CLICK IN BUTTONS
+
+    WHEN YOU CLICK ON FIRST 'BUTTON1' LOGGED ON CONSOLE, FOR SECOND
+    BUTTON 'BUTTON2' IS LOGGED AND FOR THIRD BUTTON 'BUTTON3' IS 
+    LOGGED.
+    INSTEAD OF THIS WE JUST USE THE PARENT OR ANCESTOR THAT THEY HAVE
+    TO HANDLE THE EVENT.
+
+    IN NEXT CODE WE WILL ADD EVENT TO THE PARENT DIV OF BUTTONS. NOW WE
+    HAVE JUST ONE EVENT LISTNER, BUT THE SAME LOGIC WHEN YOU CLICK BUTTON1
+    AND SAME THING FOR OTHER BUTTONS.
+
+
+    NOW WITH THE HELP OF EVENT DELEGATION, YOU CREATE FEWER EVENT LISTNERS
+    AND PERFORMS SIMILAR EVENT-BASED LOGIN IN ONE PLACE.
+
+    EVENT DELEGATION IS POSSIBLE BECAUSE OF EVENT PROPOGATION IN DOM.
+-->
