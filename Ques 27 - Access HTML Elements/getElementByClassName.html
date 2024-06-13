@@ -1,0 +1,23 @@
+<!-- 
+    Accessing DOM Elements by className
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 class="techunsolved">Techunsolved Sample 1</h1>
+        <h1 class="techunsolved">Techunsolved Sample 1</h1>
+        <h1 class="techunsolved">Techunsolved Sample 1</h1>
+
+        <p>DOM getElementByClassName() Method</p>
+    </body>
+    <script>
+        let temp = document.getElementsByClassName('techunsolved');
+        console.log(temp[0]);
+        console.log(temp[1]);
+        console.log(temp[2]);
+    </script>
+</html>
