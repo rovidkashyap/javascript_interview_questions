@@ -38,11 +38,10 @@ Question 31 - How does the JavaScript Garbage Collection work?<br />
 Question 32 - What is the difference between Shallow Copy and Deep Copy?<br />
 Question 33 - How to Manage State in JavaScript Application?<br />
 Question 34 - Describe how do you implement a simple API Call using a Fetch().<br />
-Question 35 - How do you select an Element By its ID in JavaScript?<br />
-Question 36 - How to create and Append a New Element to the DOM?<br />
-Question 37 - Difference between Event.PreventDefault() and Event.StopPropogation()?<br />
-Question 38 - How do you Attach Event Listner to an element in JavaScript?<br />
-Question 39 - How to Change the Content of HTML Elements in JavaScript?<br />
+Question 35 - How to create and Append a New Element to the DOM?<br />
+Question 36 - Difference between Event.PreventDefault() and Event.StopPropogation()?<br />
+Question 37 - How do you Attach Event Listner to an element in JavaScript?<br />
+Question 38 - How to Change the Content of HTML Elements in JavaScript?<br />
 
 This is a List of Questions mostly asked during the interview of Dot Net Developer Profile.<br />
 Subject to Copyright.
