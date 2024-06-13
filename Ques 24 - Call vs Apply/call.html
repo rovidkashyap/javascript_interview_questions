@@ -1,0 +1,34 @@
+<!--
+    JavaScript call() Method, taking the owner object as an argument.
+    The Keyword 'this' refers to the owner of function or object it
+    belongs to.
+-->
+
+<!DOCTYPE html>
+<html>
+    <body style="text-align:center">
+        <h1 style="color:green">Rovid Kashyap</h1>
+        <h3>call() Method</h3>
+
+        <button onClick="fun()">click</button>
+        <p id="gfg"></p>
+    </body>
+    <script>
+        function fun(){
+            let p = {
+                fullName: function(addr1, addr2) {
+                    return this.fName + " " + this.lName + 
+                        ", " + addr1 + ", " + addr2;
+                }
+            }
+
+            let p1 = {
+                fName: "Rovid",
+                lName: "Kashyap",
+            }
+
+            let x = p.fullName.call(p1, "Index", "USA");
+            document.getElementById("gfg").innerHTML = x;
+        }
+    </script>
+</html>

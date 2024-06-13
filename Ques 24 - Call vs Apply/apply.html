@@ -1,0 +1,34 @@
+<!--
+    JavaScript apply() Method is used to write methods, which can be
+    used on different objects. It is different from the function call()
+    because it takes arguments as an array.
+-->
+
+<!DOCTYPE html>
+<html>
+    <body style="text-align:center">
+        <h1 style="color:green">Rovid Kashyap</h1>
+        <h3>JavaScript apply() Method</h3>
+
+        <button onClick="fun()">click</button>
+        <p id="gfg"></p>
+    </body>
+    <script>
+        function fun(){
+            let p = {
+                fullName: function(addr1, addr2) {
+                    return this.fName + " " + this.lName + 
+                        ", " + addr1 + ", " + addr2;
+                }
+            }
+
+            let p1 = {
+                fName: "Rovid",
+                lName: "Kashyap",
+            }
+
+            let x = p.fullName.apply(p1, ["Index", "USA"]);
+            document.getElementById("gfg").innerHTML = x;
+        }
+    </script>
+</html>
