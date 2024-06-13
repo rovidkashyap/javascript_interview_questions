@@ -1,0 +1,62 @@
+<!--
+    Certainly both 'localStorage' and 'sessionStorage' are part of
+    the Web Storage API and used to store data on client side.
+
+    `localStorage` - has no expiration time and remain until 
+                    explicitly deleted, even if browser is closed.
+                    and data is shared across all tabs and windows
+                    with the same origin.
+
+    `sessionStorage` - available for the duration of the page session.
+                    it is cleared when the page session ends, i.e.,
+                    when the browser tab or windows is closed and data is
+                    specific to single tab or windows not shared.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>localStorage vs sessionStorage</title>
+    </head>
+    <body>
+        <h1>localStorage vs sessionStorage</h1>
+        <button onclick="useLocalStorage()">Use localStorage</button>
+        <button onclick="useSessionStorage()">Use sessionStorage</button>
+        <button onclick="clearStorage()">Clear Storage</button>
+
+        <p id="output"></p>
+    </body>
+    <script>
+        function useLocalStorage() {
+            // Store data in localStorage
+            localStorage.setItem('localData', "This is localStorage Data");
+            displayStorageData();
+        }
+
+        function useSessionStorage() {
+            // Store data in sessionStorage
+            sessionStorage.setItem("sessionData", "This is sessionStorage data");
+            displayStorageData();
+        }
+
+        function clearStorage() {
+            // clear both localStorage and sessionStorage
+            localStorage.clear();
+            sessionStorage.clear();
+            displayStorageData();
+        }
+
+        function displayStorageData() {
+            // Display the contents of localStorage and sessionStorage
+            const localData = localStorage.getItem('localData');
+            const sessionData = sessionStorage.getItem("sessionData");
+
+            document.getElementById('output').innerHTML = 
+                    `<strong>localStorage:</strong> ${localData ? localData : 'No Data'}<br />
+                    <strong>sessionStorage:</strong> ${sessionData ? sessionData : 'No Data'}`;
+        }
+
+        // Display storage data on page load
+        displayStorageData();
+    </script>
+</html>
