@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Append Element Example</title>
+        <style>
+            .new-div {
+                background-color: lightblue;
+                padding:10px;
+                margin-top:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <!-- Existing content -->
+             <p>Existing content in container</p>
+        </div>
+    </body>
+    <script>
+        const newDiv = document.createElement('div');
+        newDiv.textContent = 'This is a new div element!';
+        newDiv.classList.add('new-div');
+
+        const container = document.getElementById('container');
+        container.appendChild(newDiv);
+    </script>
+</html>
