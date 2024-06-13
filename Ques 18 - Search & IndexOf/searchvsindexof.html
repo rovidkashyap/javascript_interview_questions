@@ -1,0 +1,32 @@
+<!--
+    The Both are two search methods of JavaScript :
+    1. Search() - cannot take the second argument, which is the position
+                    argument. The position or startIndex argument is 
+                    used when w need to start searching from a specified
+                    index instead of from start.
+    2. IndexOf() - Cannot perform search against a regular expression
+-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>----- Using IndexOf() -----<br />
+            The Index of 'Fun' = <span id="mySpan1"></span> 
+        </p>
+        <p>----- Using search() ------<br />
+            The Index of 'Fun' = <span id="mySpan2"></span> 
+        </p>
+    </body>
+    <script>
+        let x = "JavaScript is Fun. Is not it?";
+
+        let y = x.indexOf("Fun");
+        document.getElementById("mySpan1").innerHtml = y;
+
+        let a = "JavaScript is Fun. Is not it?";
+
+        let b = a.search("Fun");
+        document.getElementById("mySpan2").innerHtml = b;
+    </script>
+</html>
+
